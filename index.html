@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <link rel="stylesheet" href="./style.css">
+
+
+        <title>Email Automation</title>
+    </head>
+    <body>
+        <!-- <h1>Hello, world!</h1> -->
+
+        <div class="container-fluid">
+
+            <div class="row input">
+                <div class="col-md-12">
+                    <div class="collapse" id="personalInfo">
+                        <div class="row">
+        
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                        <label for="userName">Name</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Enter Name" onkeyup="username()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="jobPost">Job Post</label>
+                            <input type="text" class="form-control" id="jobPost" placeholder="Enter Job Post" onkeyup="jobPost()">
+                            </div>
+                        <div class="col-md-2">
+                                <label for="company">Company</label>
+                                <input type="text" class="form-control" id="userCompanyName" placeholder="Enter Job Post" onkeyup="companyName()">
+                        </div>
+                        <!-- <div class="col-md-2">
+                            <label for="education">Education</label>
+                            <input type="text" class="form-control" id="userEducation" placeholder="Enter Education" onkeyup="education()">
+                        </div> -->
+                        <div class="col-md-2">
+                            <label for="Number">Number</label>
+                            <input type="text" class="form-control" id="firstNumber" placeholder="Enter Number" onkeyup="num()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="userEmail">Email</label>
+                            <input type="text" class="form-control" id="userEmail" placeholder="Enter WebSite" onkeyup="userEmail()">
+                        </div>
+                        <div class="col-md-1"></div>
+                        </div>
+                      </div>
+                </div>
+              <div class="col-md-12">
+                <div class="collapse" id="socialInfo">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="Web">Website</label>
+                            <input type="text" class="form-control" id="Web" placeholder="Enter WebSite" onkeyup="web()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter Address" onkeyup="address()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="facebookLink">Facebook Link</label>
+                            <input type="text" class="form-control" id="facebookLink" placeholder="Enter Facebook Link" onkeyup="facebookLink()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="twitterLink">Twitter</label>
+                            <input type="text" class="form-control" id="twitterLink" placeholder="Enter Twitter link" onkeyup="twitterLink()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="linkedin">Linkedin</label>
+                            <input type="text" class="form-control" id="linkedin" placeholder="Enter Linkedin" onkeyup="linkedin()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="instagramLink">Instagram</label>
+                            <input type="text" class="form-control" id="instagramLink" placeholder="Enter Instagram" onkeyup="instagramLink()">
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                <div class="collapse" id="images">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-2">
+                            <label for="image">Profile Image Url</label>
+                            <input type="text" class="form-control" id="image" placeholder="Enter Image Url" onchange="imgInput()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="cImage">Address</label>
+                            <input type="text" class="form-control" id="cImage" placeholder="Enter Image Url" onchange="companyImage()">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="iconColor">Icon Color</label>
+                            <input type="text" class="form-control" id="iconColor" placeholder="Enter Color Code" onchange="colorChange()">
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-md-12 mt-3">
+                <div class="row ">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-7" style="margin-left:6%;">
+                    <div class="row">
+                        <div class="col-md-3 col-6 text-center ">
+                            <h6 class="left" data-toggle="collapse" href="#personalInfo" role="button" aria-expanded="false" aria-controls="personalInfo"><i class="fa-solid fa-caret-down"id="personalInfoDown"></i> Personal Info</h6>
+                        </div>
+                        <div class="col-md-3 col-6 text-center">
+                            <h6 class="left" data-toggle="collapse" href="#socialInfo" role="button" aria-expanded="false" aria-controls="socialInfo"> <i class="fa-solid fa-caret-down"></i> Social Info</h6>      
+                        </div>
+                        <div class="col-md-3 col-6 text-center">
+                            <h6  class="left" data-toggle="collapse" href="#images" role="button" aria-expanded="false" aria-controls="images"><i class="fa-solid fa-caret-down"></i> Images</h6>      
+                        </div>
+                        <div class="col-md-3 col-6 text-center">
+                            <a class="left"  href="#" onclick="printPdf()"><i class="fa-solid fa-file-pdf"></i> Download in PDF</a>
+                        </div>
+                    </div>
+                  
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+              </div>
+             
+            
+              
+                
+            </div>
+
+
+
+
+
+
+
+            <div class="row mt-3" id="data">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <img src="./usamaphoto.jpeg" alt="profileImage" id="profileImage"
+                                    class=" rounded">
+                            </p>
+                        </div>
+                        <div class="col-md-6" id="personal">
+                            <h5 class="text-left " id="firstName">Usama Faheem Ahmed
+                            </h5>
+                            <p class="text-left " id="jobTitle">Manager</p>
+                            <p class="text-left" id="companyText"><span  id="jobTitle1">Management</span> |
+                                <span id="companyName">FT.Solution</span></p>
+                            <!-- <p class="text-left" id="education">BSSE from Lahore Garrison University</p> -->
+                            <br>
+                            <br>
+
+                            <div class="line"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <br>
+                            <p class="text-center mb-4 ">
+                                <img src="./companylogo.png"
+                                    alt="companyImage" id="companyImage" class="img-fluid">
+                            </p>
+
+                            <div class="row ">
+                                <div class="col-md-2 col-sm-2 col-2"
+                                    id="buttonLink"></div>
+                                <div class="roundIcon text-center">
+                                    <a role="button"
+                                        href="https://www.facebook.com/profile.php?id=100086212257315" target="_blank" id="facebook"><i
+                                            class="fa-brands fa-facebook-f
+                                            size"></i>
+                                    </a>
+                                </div>
+                                <div class="roundIcon text-center ml-2">
+                                    <a role="button" href="https://twitter.com/i/flow/login" target="_blank" id="twitter"><i
+                                            class="fa-brands fa-twitter size"></i></a>
+                                </div>
+                                <div class="roundIcon text-center ml-2">
+                                    <a role="button"
+                                        href="https://www.linkedin.com/in/usama-ahmed-a1960b1b9" target="_blank" id="linkedinLink"><i
+                                            class="fa-brands
+                                            fa-linkedin-in size"></i></a>
+                                </div>
+                                <div class="roundIcon text-center ml-2">
+                                    <a role="button"
+                                        href="https://www.instagram.com/" target="_blank" id="insta"><i
+                                            class="fa-brands fa-instagram size"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <br>
+                            <div class="row pl-1 " id="phoneDiv">
+                                <div class="col-md-1 col-sm-1 col-1 pt-2"><i class="fa-solid fa-phone
+                                    mr-3 pink" style="font-size: 19px;"></i></div>
+                                <div class="col-md-10 col-sm-10 col-10 pl-3">
+                                    <p class="text-left">
+                                        <span id="firstPhoneNumber">03123413576</span>
+                                        | <span id="secondPhoneNumber">Phone Number</span>
+                                    </p>
+                                </div>
+                            </div>
+                           
+                            <div class="row pl-1 " id="emailDiv">
+                                <div class="col-md-1 col-sm-1 col-1 pt-2"><i
+                                        class="fa-solid fa-envelope mr-3 pink"
+                                        style="font-size: 19px;"></i></div>
+                                <div class="col-md-10 col-sm-10 col-10 pl-3">
+                                    <p style="padding: 0px; margin-left: 0px;"><a href="mailto:usamafaheem@gmail.com" style="color: black;" id="email">usamafaheemahmed80@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="row pl-1 " id="webDiv">
+                                <div class="col-md-1 col-sm-1 col-1 pt-2"><i class="fa-solid fa-link mr-3
+                                    pink" style="font-size: 19px;"></i></div>
+                                <div class="col-md-10 col-sm-10 col-10 pl-3">
+                                    <p  style="padding: 0px; margin-left: 0px;"><a href="https://fahadtechsolution.com/?fbclid=IwAR2EJ7mu9F5s0U2PKFPeEXOKwNjjuLbJR6mkounXWs0Eq4aQHRx3BWVEGlE" id="webLink" style="color: black;" target="_blank">https://fahadtechsolution.com/</a></p>
+                                </div>
+                            </div>
+                            <div class="row pl-1 " id="addressDiv">
+                                <div class="col-md-1 col-sm-1 col-1 pt-2"><i
+                                        class="fa-solid fa-location-dot mr-3
+                                        pink" style="font-size: 19px;"></i></div>
+                                <div class="col-md-10 col-sm-10 col-10 pl-3">
+                                    <p class="text-left"><span id="location">Office
+                                            No. 1, 1st Floor, UBL Bank Building
+                                            College, Road, Lahore, 54600,
+                                            Pakistan</span></p>
+                                </div>
+                            </div>
+
+                           
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- <h1>Hello, world!</h1> -->
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"
+            integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./script.js"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    </body>
+</html>
